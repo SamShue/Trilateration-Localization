@@ -2,20 +2,14 @@ clc;
 clear all;
 close all;
 
-% https://calcworkshop.com/derivatives/newtons-method/
-
 % plot function to be solved
 v = -1:0.1:1;
 plot(v', f(v));
 
-% initial guess
-x_n = 2;
+x_init = 2;
+f(x);
 
-for ii = 1:100
-    x_n1 = x_n - f(x_n)/f_prime(x_n)
-    x_n = x_n1;
-end
-    
+for
 
 
 
