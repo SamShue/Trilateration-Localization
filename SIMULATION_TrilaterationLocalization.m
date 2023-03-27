@@ -18,7 +18,8 @@ for ii = 1:size(L,1)
 end
 
 % estimate point from distances and landmarks
-p_e = trilat(L,d);
+% p_e = trilat(L,d);
+p_e = multilateration2d(L,d);
 
 % Plot Results
 % Landmarks
