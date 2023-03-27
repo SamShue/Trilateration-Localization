@@ -2,7 +2,6 @@ function [x_n] = multilateration2d( X, d )
 % X: matrix with 2d landmark/feature coordinates
 % d: distance estimation vector
 
-
 % Function we are minimizing:
 % f(x, y) = dn - sqrt((xn - x)^2 + (yn - y)^2)
 % where n is the number of beacons and measurements
@@ -37,3 +36,6 @@ end
 function [F] = computeJacobian(X, n)
     F = [2*(X(:,1) - n(1)), 2*X(:,2) - n(2)];
 end
+
+% Inversion of non-square matrix:
+% https://math.stackexchange.com/questions/1335693/invertible-matrix-of-non-square-matrix
