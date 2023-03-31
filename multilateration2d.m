@@ -14,7 +14,7 @@ function [x_n] = multilateration2d( X, d )
 %      ...
 %      2*(xn - x), 2*(yn - y)];
 
-x_n = [0,0];
+x_n = [0;0];
 
 for ii = 1:10
     b = f(X, d, x_n)
